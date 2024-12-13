@@ -1,70 +1,80 @@
-/* Dreamcore-Inspired CSS */
+/* Enhanced Dreamcore-Inspired CSS */
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d6f0f9; /* Soft pastel blue */
+    background: linear-gradient(135deg, #d6f0f9, #fde2f4); /* Soft pastel gradient */
     color: #333;
     line-height: 1.8;
+    overflow-x: hidden;
 }
 
 p {
-    padding: 10px;
-    background-color: #a6d4fa; /* Light pastel blue */
+    padding: 15px;
+    background: rgba(166, 212, 250, 0.7); /* Light transparent pastel blue */
     text-align: center;
-    font-size: 1.0em;
-    color: #333; 
+    font-size: 1.1em;
+    color: #333;
     margin-bottom: 20px;
-    text-align: center;
     border: 2px solid #81d4fa;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
 }
 
 p:hover {
     color: #fff;
-    background: #81d4fa; /* Hover effect pastel blue */
+    background: linear-gradient(135deg, #81d4fa, #a6d4fa); /* Hover gradient effect */
     border-color: #6aa1d8;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #a6d4fa; /* Light pastel blue */
-    padding: 10px 20px;
+    background: rgba(166, 212, 250, 0.8); /* Semi-transparent pastel blue */
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 nav a {
     text-decoration: none;
     color: #6aa1d8;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #81d4fa;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #81d4fa; /* Hover effect */
+    background: linear-gradient(135deg, #81d4fa, #fde2f4); /* Hover gradient */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 /* Title Style */
 h1 {
     text-align: center;
-    font-size: 2.5em;
-    color: #6aa1d8; 
+    font-size: 3em;
+    color: #81d4fa; 
     margin-bottom: 20px;
     position: relative;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(to right, #81d4fa, #a6d4fa);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #81d4fa, #fde2f4);
     margin: 10px auto 0;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 /* Link Style */
@@ -72,35 +82,38 @@ a {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #6aa1d8; /* Soft pastel blue links */
     margin: 15px auto;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: 2px solid #81d4fa;
-    border-radius: 8px;
-    background: #fff;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
     max-width: 300px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 a:hover {
     color: #fff;
-    background: #81d4fa; /* Hover effect */
+    background: linear-gradient(135deg, #81d4fa, #a6d4fa); /* Hover gradient */
     border-color: #6aa1d8;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
     a {
-        font-size: 1em;
-        padding: 8px 16px;
+        font-size: 1.1em;
+        padding: 10px 20px;
         max-width: 100%;
     }
 }
+
 
 
 
