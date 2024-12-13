@@ -46,9 +46,18 @@ h1 {
 h2 {
     text-align: center;
     font-size: 1.8em;
-    color: #6aa1d8; /* Cool pastel blue */
     margin-top: 1em;
+    font-weight: bold;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #6aa1d8, #f06292); /* Gradient pastel blue to pink */
+    -webkit-background-clip: text; /* Ensures background is clipped to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
