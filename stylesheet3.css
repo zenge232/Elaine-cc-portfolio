@@ -1,0 +1,113 @@
+/* Dreamcore-Inspired CSS */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d6f0f9; /* Soft pastel blue */
+    color: #333;
+    line-height: 1.8;
+}
+
+p {
+    padding: 10px;
+    background-color: #a6d4fa; /* Light pastel blue */
+    text-align: center;
+    font-size: 1.0em;
+    color: #333; 
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #81d4fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    color: #fff;
+    background: #81d4fa; /* Hover effect pastel blue */
+    border-color: #6aa1d8;
+    transform: scale(1.05);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #a6d4fa; /* Light pastel blue */
+    padding: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6aa1d8;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #81d4fa; /* Hover effect */
+}
+
+/* Title Style */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #6aa1d8; 
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #81d4fa, #a6d4fa);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Link Style */
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #6aa1d8; /* Soft pastel blue links */
+    margin: 15px auto;
+    padding: 10px 20px;
+    border: 2px solid #81d4fa;
+    border-radius: 8px;
+    background: #fff;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    background: #81d4fa; /* Hover effect */
+    border-color: #6aa1d8;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    a {
+        font-size: 1em;
+        padding: 8px 16px;
+        max-width: 100%;
+    }
+}
+
+
+
+/* 让 sketch-container1 居中 */
+#sketch-container1 {
+    display: flex; /* 启用 Flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width: 100%; /* 占满宽度 */
+}

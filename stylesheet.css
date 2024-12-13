@@ -1,0 +1,111 @@
+/* Dreamcore-Inspired CSS */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #a6d4fa, #f2e6fb); /* Soft sky and pastel purple */
+    color: #2e2e2e; /* Neutral gray for text */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background: rgba(173, 216, 230, 0.9); /* Transparent pastel blue */
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 3px solid #92c1e9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffacd4; /* Dreamy pastel pink */
+    text-align: center;
+    margin-top: 1em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #6aa1d8; /* Cool pastel blue */
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+h3, h4 {
+    margin: 0.5em 0;
+    color: #4b4b4b; /* Soft neutral gray */
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hover-box {
+    background: rgba(248, 248, 248, 0.9); /* Dreamy light background */
+    border: 3px solid #d4a5ed; /* Pastel purple border */
+    border-radius: 20px;
+    padding: 1.5em;
+    margin: 1em auto;
+    width: 80%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hover-box:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    color: #ffacd4; /* Pastel pink */
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.3em;
+    color: #6aa1d8; /* Cool pastel blue */
+    font-style: italic;
+}
+
+h3:last-child {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4b4b4b; /* Neutral gray */
+}
+
+/* Add floating dream-like effects */
+nav, .hover-box {
+    backdrop-filter: blur(10px);
+    border-image-source: linear-gradient(to right, #6aa1d8, #ffacd4);
+    border-image-slice: 1;
+}
+
+/* Smooth transitions for links */
+a {
+    color: #6aa1d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffacd4;
+}
+
+/* Dreamcore floating aesthetic */
+.hover-box::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 172, 212, 0.3), rgba(106, 161, 216, 0.3));
+    z-index: -1;
+    filter: blur(15px);
+    border-radius: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');

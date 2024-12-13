@@ -1,0 +1,97 @@
+/* Dreamcore-Inspired CSS for Elaine Zeng's Portfolio */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #d6f0f9, #fde2f4); /* Dreamy pastel aqua and pink */
+    color: #3e3e3e; /* Neutral gray for text */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background: rgba(200, 250, 255, 0.9); /* Transparent pastel blue */
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #81d4fa;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: #81d4fa;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border: 2px solid #81d4fa;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #81d4fa;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    text-align: center;
+    margin: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    color: #f06292; /* Soft pastel pink */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: floatText 3s infinite ease-in-out;
+}
+
+/* Floating animation for dreamlike feel */
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#sketch-container6 {
+    width: 80%;
+    height: 400px;
+    margin: 2em auto;
+    border: 3px solid #81d4fa;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(200, 240, 250, 0.6));
+    backdrop-filter: blur(10px);
+}
+
+/* List of Projects */
+main br {
+    margin-bottom: 1em;
+    display: block;
+    line-height: 2em;
+    font-size: 1.2em;
+    color: #6aa1d8; /* Cool pastel blue */
+    font-weight: bold;
+}
+
+/* Import dreamy font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
