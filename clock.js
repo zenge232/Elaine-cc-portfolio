@@ -1,18 +1,21 @@
 let previousMillis = 0; // Variable to store the last time the clock updated
 let timeString = ''; // Variable to store the current time string
+let timeSlider; // Slider to adjust the clock // NEW CODE
 
 function setup() {
-  createCanvas(600, 600).parent("sketch-container1"); // Canvas size remains the same
+  createCanvas(600, 600); // Canvas size remains the same
   noStroke();
+  
+  // Create the slider for time adjustment (0 to 23.99 for 24-hour simulation) // NEW CODE
+  timeSlider = createSlider(0, 23.99, hour() + minute() / 60, 0.01); // NEW CODE
+  timeSlider.position(60, 380); // Position the slider near the bottom // NEW CODE
+  timeSlider.style('width', '500px'); // NEW CODE
+
 }
 
 function draw() {
-  // Change background based on mouse pressed state
-  if (mouseIsPressed) {
-    background(10, 20, 40); // Dark night sky
-  } else {
-    background(135, 200, 235); // Day sky
-  }
+   // Update background color based on time
+  updateBackgroundColor();
 
   drawBlueBuildings(); // Draw the blue buildings
   drawRedBuildings(); // Draw the red buildings
@@ -31,16 +34,21 @@ function draw() {
   textSize(32); // Set text size
   textAlign(CENTER, TOP); // Center align text horizontally at the top
   text(timeString, width / 2, 120); // Draw the timer at the center top
+  
+  
+  // Draw an emoji beside the clock
+  drawEmoji(width / 2 + 100, 120); // Call the function to draw the emoji
 }
 
-// Function to display the digital clock at the top
+// Function to display the digital clock based on slider time // UPDATED CODE
 function displayTimer() {
-  let h = hour(); // Get the current hour
-  let m = minute(); // Get the current minute
-  let s = second(); // Get the current second
-  
+  let t = timeSlider.value(); // Get the current time value from the slider // NEW CODE
+  let h = floor(t); // Extract the hour // NEW CODE
+  let m = floor((t - h) * 60); // Extract the minute // NEW CODE
+  let s = second(); // Use the real seconds
+
   // Format the time to always show two digits
-  timeString = nf(h, 2) + ':' + nf(m, 2) + ':' + nf(s, 2);
+  timeString = nf(h, 2) + ':' + nf(m, 2) + ':' + nf(s, 2); // UPDATED CODE
 }
 
 // Function to draw the complex dark buildings
@@ -145,4 +153,86 @@ function drawWindowGlow(x, y, w, h) {
     fill(255, 0, 0, 100 - i * 5); // Red color with decreasing alpha
     rect(x - i / 0.5, y - i / 0.5, w + i, h + i);
   }
+}
+
+
+// Function to update the background color based on time
+function updateBackgroundColor() {
+  let h = hour(); // Get the current hour
+  let m = minute(); // Get the current minute
+  let t = h + m / 60; // Convert time to a float for smooth transitions
+
+  let bgColor; // Variable to hold the background color
+
+  // Determine the background color based on the time of day
+  if (t >= 6 && t < 12) {
+    // Morning: light blue
+    bgColor = lerpColor(color(200, 220, 255), color(135, 200, 235), (t - 6) / 6);
+  } else if (t >= 12 && t < 17) {
+    // Afternoon: vibrant light blue
+    bgColor = lerpColor(color(135, 200, 235), color(100, 180, 255), (t - 12) / 5);
+  } else if (t >= 17 && t < 19) {
+    // Evening: blend of yellow and light blue
+    bgColor = lerpColor(color(255, 220, 150), color(135, 200, 235), (t - 17) / 2);
+  } else {
+    // Night: dark blue
+    if (t >= 19) {
+      bgColor = lerpColor(color(10, 20, 40), color(15, 30, 50), (t - 19) / 5);
+    } else {
+      bgColor = lerpColor(color(10, 20, 40), color(15, 30, 50), t / 6);
+    }
+  }
+
+  background(bgColor); // Set the calculated background color
+}
+
+// Function to update the background color based on slider time // UPDATED CODE
+function updateBackgroundColor() {
+  let t = timeSlider.value(); // Get the current time value from the slider // NEW CODE
+
+  let bgColor; // Variable to hold the background color
+
+  // Determine the background color based on the time of day
+  if (t >= 6 && t < 12) {
+    // Morning: light blue
+    bgColor = lerpColor(color(200, 220, 255), color(135, 200, 235), (t - 6) / 6);
+  } else if (t >= 12 && t < 17) {
+    // Afternoon: vibrant light blue
+    bgColor = lerpColor(color(135, 200, 235), color(100, 180, 255), (t - 12) / 5);
+  } else if (t >= 17 && t < 19) {
+    // Evening: blend of yellow and light blue
+    bgColor = lerpColor(color(255, 220, 150), color(135, 200, 235), (t - 17) / 2);
+  } else {
+    // Night: dark blue
+    if (t >= 19) {
+      bgColor = lerpColor(color(10, 20, 40), color(15, 30, 50), (t - 19) / 5);
+    } else {
+      bgColor = lerpColor(color(10, 20, 40), color(15, 30, 50), t / 6);
+    }
+  }
+
+  background(bgColor); // Set the calculated background color
+}
+
+// Function to display the digital clock based on slider time // UPDATED CODE
+function displayTimer() {
+  let t = timeSlider.value(); // Get the current time value from the slider // NEW CODE
+  let h = floor(t); // Extract the hour // NEW CODE
+  let m = floor((t - h) * 60); // Extract the minute // NEW CODE
+  let s = second(); // Use the real seconds
+
+  // Format the time to always show two digits
+  timeString = nf(h, 2) + ':' + nf(m, 2) + ':' + nf(s, 2); // UPDATED CODE
+}
+
+// Function to draw an emoji beside the clock
+function drawEmoji(x, y) {
+  textSize(32); // Set the size for the emoji
+  textFont('Arial'); // Use a font that supports emojis
+  textAlign(CENTER, CENTER); // Center the emoji
+  text("🌞", 310, 28); // Draw the emoji (smiley face in this case)
+  text("🌘", 549, 28); // Draw the emoji (smiley face in this case)
+  text("🌑", 72, 28); // Draw the emoji (smiley face in this case)
+  text("🌇", 420, 28); // Draw the emoji (smiley face in this case)
+  text("🌅", 200, 28); // Draw the emoji (smiley face in this case)
 }
