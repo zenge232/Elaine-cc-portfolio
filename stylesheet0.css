@@ -75,6 +75,19 @@ h3 {
     transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
 }
 
+h5 {
+    text-align: center; /* Centers the text */
+    font-size: 1.3em; /* Sets font size */
+    margin-top: 1em; /* Adds space at the top */
+    font-weight: bold; /* Makes the text bold */
+    background: linear-gradient(180deg, #d38714, #f06292); /* Gradient background */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent to reveal the gradient */
+    color: #6aa1d8; /* Fallback color for unsupported browsers */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
 h2:hover {
     transform: scale(1.1); /* Enlarges on hover */
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
