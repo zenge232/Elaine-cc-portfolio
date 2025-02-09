@@ -1,0 +1,72 @@
+/* This is the grid properties */
+
+.container {
+    display: grid;
+    grid-template-rows: 200px 600px ;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-areas: 
+    'Header Tittle'
+    'Project Description '
+    'footer footer'
+}
+
+
+  .item-1{
+    grid-area: Tittle; 
+
+  }
+
+
+  .item-2{
+    grid-area: Project;
+
+
+  }
+
+  .item-3{
+    grid-area: Description ;
+
+}
+
+.container-2 {
+    display: grid;
+    grid-template-rows: 200px 200px ;
+    grid-template-columns: 1fr 2fr ;
+  gap: 10px;
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 50px;
+  grid-template-areas: 
+    'Inspiration Description'
+    'Inspiration2 Description2 '
+    
+
+}
+
+   .item-5{
+
+    grid-area: Inspiration;
+
+
+   }
+
+   .item-6{
+
+    grid-area: Description;
+
+
+   }
+
+
+   .item-7{
+
+    grid-area: Inspiration2;
+
+
+   }
+
+   .item-8{
+
+    grid-area: Description2;
+
+
+   }
