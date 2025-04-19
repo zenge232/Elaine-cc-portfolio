@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step 2</title>
+  <link rel="stylesheet" href="1style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Step 2: Class & Lifestyle</h1>
+    <form id="step2-form">
+      <label>5. Private or Group class?</label><br>
+      <input type="radio" name="classType" value="private"> Private<br>
+      <input type="radio" name="classType" value="group"> Group<br><br>
+
+      <label>6. Budget per class:</label><br>
+      <select id="budget">
+        <option value="">--Select--</option>
+        <option value="low">Under $20</option>
+        <option value="mid">$20–$40</option>
+        <option value="high">Over $40</option>
+      </select><br><br>
+
+      <label>7. Schedule availability:</label><br>
+      <input type="radio" name="schedule" value="weekdays"> Weekdays<br>
+      <input type="radio" name="schedule" value="weekends"> Weekends<br>
+      <input type="radio" name="schedule" value="both"> Both<br><br>
+
+      <label>8. What vibe are you looking for?</label><br>
+      <select id="vibe">
+        <option value="">--Select--</option>
+        <option value="training">Professional / Training</option>
+        <option value="fun">Chill / Fun</option>
+        <option value="social">Social / Community</option>
+      </select><br><br>
+
+      <button type="submit">See Results</button>
+    </form>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>

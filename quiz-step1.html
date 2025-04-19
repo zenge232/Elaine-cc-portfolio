@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step 1</title>
+  <link rel="stylesheet" href="1style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Step 1: Your Preferences</h1>
+    <form id="step1-form">
+      <label>1. What type of dance?</label><br>
+      <select id="style">
+        <option value="">--Select--</option>
+        <option value="kpop">K-Pop</option>
+        <option value="hiphop">Hip-Hop</option>
+        <option value="contemporary">Contemporary</option>
+        <option value="ballet">Ballet</option>
+      </select><br><br>
+
+      <label>2. Skill level:</label><br>
+      <input type="radio" name="level" value="beginner"> Beginner<br>
+      <input type="radio" name="level" value="intermediate"> Intermediate<br>
+      <input type="radio" name="level" value="advanced"> Advanced<br><br>
+
+      <label>3. Preferred location:</label><br>
+      <select id="location">
+        <option value="">--Select--</option>
+        <option value="midtown">Midtown</option>
+        <option value="uptown">Uptown</option>
+        <option value="downtown">Downtown</option>
+        <option value="brooklyn">Brooklyn</option>
+      </select><br><br>
+
+      <label>4. Class size:</label><br>
+      <select id="classSize">
+        <option value="">--Select--</option>
+        <option value="small">Small (5–10)</option>
+        <option value="medium">Medium (10–20)</option>
+        <option value="large">Large (20+)</option>
+      </select><br><br>
+
+      <button type="submit">Next</button>
+    </form>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>
